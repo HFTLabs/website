@@ -8,11 +8,6 @@ function About1() {
   return (
     <div>
       <section class="page-section bg-white text-white mb-0" id="about">
-        <ScrollAnimation
-          animateIn="bounceInLeft"
-          animateOnce="true"
-          duration={1.5}
-        >
           <div class="container">
             <h2 class="page-section-heading text-center text-uppercase text-black">
               discover the universe of meebit avatars
@@ -33,33 +28,13 @@ function About1() {
                   also ultra-rare variants waiting for you to discover.
                 </p>
               </div>
-              <div class="col-lg-4 ml-auto">
-                <p class="lead text-black text-center">
-                  {/* <img src={image1} alt="/" class="hari1" />
-                  <h4>Colors</h4>
-                  Avatars come in a variety of colors, each resembling a
-                  different hue of the rainbow. */}
-                </p>
-              </div>
-
-              {/* <div class="col-lg-4 ml-auto">
-                <p class="lead text-black text-center">
-                  <img src="/images/4.gif" alt="/" class="hari1" />
-                  <h4>Animate</h4>
-                  Avatars come in a variety of colors, each resembling a
-                  different hue of the rainbow.
-                </p>
-              </div>
-              <div class="col-lg-4 ml-auto">
-                <p class="lead text-black text-center">
-                  <img src="/images/2.gif" alt="/" class="hari1" />
-                  <h4>Ultra rare</h4>
-                  Avatars come in a variety of colors, each resembling a
-                  different hue of the rainbow.
-                </p>
-              </div> */}
             </div>
           </div>
+     <ScrollAnimation
+          animateIn="bounceInLeft"
+          animateOnce="true"
+          duration={1.5}
+        >
           <div class="collageRow">
             <div class="collageColumn">
               <img
@@ -77,6 +52,7 @@ function About1() {
               />
             </div>
           </div>
+          </ScrollAnimation>
           <br />
           <br />
           <div class="text-center mt-4">
@@ -84,7 +60,7 @@ function About1() {
               GET YOUR AVATAR
             </Link>
           </div>
-        </ScrollAnimation>
+       
       </section>
     </div>
   );
