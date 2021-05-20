@@ -1,0 +1,20 @@
+{
+    "attributes": [
+        {
+            "trait_type": "Art Style",
+            "value": "Picasso"
+        },
+        {
+            "trait_type": "Filter Style",
+            "value": "Facet"
+        },
+        {
+            "trait_type": "Original Meebit Number",
+            "value": " 7083"
+        }
+    ],
+    "description": "MeebitAvatars are 4096 programmatically generated hidden avatars of some of the most awesome Meebits residing on the Ethereum Blockchain and IPFS.",
+    "external_url": "https://gateway.pinata.cloud/ipfs/QmerPQgALDKhznhCaPAwGWd2DfWYP9oWH44XSbpMESeisE",
+    "image": "https://gateway.pinata.cloud/ipfs/QmerPQgALDKhznhCaPAwGWd2DfWYP9oWH44XSbpMESeisE",
+    "name": "MeebitAvatar #14"
+}
