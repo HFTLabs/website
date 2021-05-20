@@ -513,11 +513,6 @@ mark,
   margin:auto;
   height: auto;
   pointer-events: none !important;
-  opacity: 100% !important;
-}
-
-.img-fluid:hover{
-  opacity: 50% !important;
 }
 
 .img-thumbnail {
