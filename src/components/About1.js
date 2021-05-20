@@ -1,6 +1,8 @@
 import "../css/styles.css";
 import { Link } from "react-router-dom";
-import image1 from "../assets/img/1.jpg";
+import image1 from "../assets/img/Collage.png";
+import image2 from "../assets/img/Collage1.png";
+import image3 from "../assets/img/Collage2.png";
 import ScrollAnimation from "react-animate-on-scroll";
 function About1() {
   return (
@@ -61,20 +63,17 @@ function About1() {
           <div class="collageRow">
             <div class="collageColumn">
               <img
-                src="https://lh3.googleusercontent.com/ChSFTl3b-GUeTePhZ6YxAKZNo6_39Bf34ckOobKSIsDbBabN8wfp5SRMP_StCimrUCzL7DvajHkMftZJQSWhVNGstKN2YhAsz3KVnVxUyYjRfzMdW2HpEpj8raI6sjujWeX75X5d=w2400"
-                alt="1"
+                src={image1} alt="1"
               />
             </div>
             <div class="collageColumn">
-              <img
-                src="https://lh3.googleusercontent.com/ltq9EcmvdPjq8bREZvhACEYx5aLMu9eFDICGOBz4yTpCiRG7-En6wAt2rMax0LQnLkzlvqWdl7XWViU9MsS_T7xjkp7e3UL6ONItG5yMsuOra15DedY5vjgJ6vzA7e8JlyVeRd-j=w2400"
-                alt="2"
+               <img
+                src={image2} alt="2"
               />
             </div>
             <div class="collageColumn">
-              <img
-                src="https://lh3.googleusercontent.com/pvzCxqY-1zJfnMsOATt5dzrQy0g7KbAsADIrdYBIyetjefxOA1wf1qYvkwpCYyxE2P07Te6fNa-wqGPDE3awflVQLAIzZ74mMdex8Md81JhhWQs6MC8YMAt6rU_uV6CKPNTg5Jkl=w2400"
-                alt="3"
+               <img
+                src={image3} alt="3"
               />
             </div>
           </div>
