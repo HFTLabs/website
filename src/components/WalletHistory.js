@@ -47,6 +47,7 @@ class WalletHistory extends React.Component {
       } else
       {
         window.alert("Smart contract not deployed to detected network.");
+        this.setState({ network: 0 });
       }
     }
   }

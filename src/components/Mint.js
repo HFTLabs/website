@@ -44,23 +44,16 @@ class Mint extends Component {
       this.setState({ contract });
     } else {
       window.alert("Smart contract not deployed to detected network.");
+      this.setState({ network: 0 });
     }
 
+    this.check();
     optionValue = 1;
     let etherCost = await this.state.contract.methods.calculatePrice(optionValue).call();
     etherCost = web3.utils.fromWei(etherCost, 'ether');
     this.setState({ ethCost: etherCost });
     collectibleValue = 2;
-    this.check();
   }
-
-  // window.ethereum.on('accountsChanged', function (accounts) {
-  //   // Time to reload your interface with accounts[0]!
-  // });
-
-  // window.ethereum.on('networkChanged', function (networkId) {
-  //   // Time to reload your interface with the new networkId
-  // });
 
   constructor(props) {
     super(props);
