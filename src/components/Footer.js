@@ -20,7 +20,7 @@ function Footer() {
               >
                 <i className="fab fa-fw fa-twitter"></i>
               </a>
-              <a className="btn btn-outline-light btn-social mx-1" href="https://discord.gg/m4MPstgTNd">
+              <a className="btn btn-outline-light btn-social mx-1" href="https://discord.gg/m4MPstgTNd" target="_blank">
                 <i className="fab fa-fw fa-discord"></i>
               </a>
             </div>
