@@ -13,7 +13,7 @@ class Gallery extends React.Component {
 
   async showImages() {
     for (var i = 1; i <= 27; i++) {
-      var pic = "/images/" + (i % 9) + ".gif";
+      var pic = "../images/" + (i % 9) + ".gif";
       if (i % 9) {
         images.push(
           <div className="col-md-6 col-lg-4 mb-5">
