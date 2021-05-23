@@ -6,26 +6,26 @@ import ScrollAnimation from "react-animate-on-scroll";
 function Overview() {
   return (
     <div>
-      <section class="page-section bg-white text-white mb-0" id="about">
-        <div class="container">
-          <h2 class="page-section-heading text-center text-uppercase text-black">
+      <section className="page-section bg-white text-white mb-0" id="about">
+        <div className="container">
+          <h2 className="page-section-heading text-center text-uppercase text-black">
             Overview
           </h2>
-          <div class="divider-custom">
-            <div class="divider-custom-line"></div>
-            <div class="divider-custom-icon">
-              <i class="fas fa-star"></i>
+          <div className="divider-custom">
+            <div className="divider-custom-line"></div>
+            <div className="divider-custom-icon">
+              <i className="fas fa-star"></i>
             </div>
-            <div class="divider-custom-line"></div>
+            <div className="divider-custom-line"></div>
           </div>
           <ScrollAnimation
             animateIn="bounceInLeft"
-            animateOnce="true"
+            animateOnce={true}
             duration={1}
           >
-            <div class="row">
-              <div class="col-lg-4 ml-auto">
-                <p class="lead text-black">
+            <div className="row">
+              <div className="col-lg-4 ml-auto">
+                <p className="lead text-black">
                   BAYC is a collection of 10,000 Bored Ape NFTs—unique digital
                   collectibles living on the Ethereum blockchain. Your Bored Ape
                   doubles as your Yacht Club membership card, and grants access
@@ -36,14 +36,14 @@ function Overview() {
                 </p>
               </div>
 
-              <div class="col-lg-4 ml-auto">
-                <p class="lead">
-                  <img src={image1} alt="/" class="hari1" />
+              <div className="col-lg-4 ml-auto">
+                <p className="lead">
+                  <img src={image1} alt="/" className="hari1" />
                 </p>
               </div>
 
-              <div class="col-lg-4 ml-auto">
-                <p class="lead text-black">
+              <div className="col-lg-4 ml-auto">
+                <p className="lead text-black">
                   BAYC is a collection of 10,000 Bored Ape NFTs—unique digital
                   collectibles living on the Ethereum blockchain. Your Bored Ape
                   doubles as your Yacht Club membership card, and grants access
@@ -54,8 +54,8 @@ function Overview() {
                 </p>
               </div>
 
-              <div class="col-lg-4 mr-auto">
-                <p class="lead text-black">
+              <div className="col-lg-4 mr-auto">
+                <p className="lead text-black">
                   BAYC is a collection of 10,000 Bored Ape NFTs—unique digital
                   collectibles living on the Ethereum blockchain. Your Bored Ape
                   doubles as your Yacht Club membership card, and grants access
@@ -66,14 +66,14 @@ function Overview() {
                 </p>
               </div>
 
-              <div class="col-lg-4 ml-auto">
-                <p class="lead">
-                  <img src="/images/4.gif" alt="/" class="hari1" />
+              <div className="col-lg-4 ml-auto">
+                <p className="lead">
+                  <img src="/images/4.gif" alt="/" className="hari1" />
                 </p>
               </div>
 
-              <div class="col-lg-4 mr-auto">
-                <p class="lead text-black">
+              <div className="col-lg-4 mr-auto">
+                <p className="lead text-black">
                   BAYC is a collection of 10,000 Bored Ape NFTs—unique digital
                   collectibles living on the Ethereum blockchain. Your Bored Ape
                   doubles as your Yacht Club membership card, and grants access
@@ -84,8 +84,8 @@ function Overview() {
                 </p>
               </div>
             </div>
-            <div class="text-center mt-4">
-              <Link class="btn btn-xl btn-outline-primary" to="/Wallet">
+            <div className="text-center mt-4">
+              <Link className="btn btn-xl btn-outline-primary" to="/Wallet">
                 GET YOUR MEMEBITS
               </Link>
             </div>

@@ -7,21 +7,21 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 var images = [];
 class Portfolio extends Component {
-  async componentWillMount() {
+  async componentDidMount() {
     images = [];
     await this.showImages();
   }
   async showImages() {
     for (var i = 1; i <= 6; i++) {
-      var pic = "../images/" + i + ".gif";
+      var pic = "/images/" + i + ".gif";
       images.push(
-        <div class="col-md-6 col-lg-4 mb-5">
+        <div className="col-md-6 col-lg-4 mb-5">
           <div
-            class="portfolio-item mx-auto"
+            className="portfolio-item mx-auto"
             data-toggle="modal"
             data-target="#portfolioModal1"
           >
-            <img class="img-fluid" src={pic} alt="..." />
+            <img className="img-fluid" src={pic} alt="..." />
           </div>
         </div>
       );
@@ -30,27 +30,31 @@ class Portfolio extends Component {
   render() {
     return (
       <div style={{ background: "#8577fb" }}>
-        <section class="page-section portfolio" id="portfolio">
-          <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+        <section className="page-section portfolio" id="portfolio">
+          <div className="container">
+            <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
               avatars
             </h2>
-            <div class="divider-custom">
-              <div class="divider-custom-line"></div>
-              <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
+            <div className="divider-custom">
+              <div className="divider-custom-line"></div>
+              <div className="divider-custom-icon">
+                <i className="fas fa-star"></i>
               </div>
-              <div class="divider-custom-line"></div>
+              <div className="divider-custom-line"></div>
             </div>
             <ScrollAnimation
               animateIn="fadeIn"
-              animateOnce="true"
+              animateOnce={true}
               duration={1.5}
             >
-              <div class="row justify-content-center">{images}</div>
+              <div className="row justify-content-center">{images}</div>
 
-              <div class="text-center mt-4">
-                <Link class="btn btn-xl btn-outline-light" to="/Gallery">
+              <div className="text-center mt-4">
+                <Link
+                  className="btn btn-xl btn-outline-light"
+                  to="/Gallery"
+                  key="portfolio"
+                >
                   VIEW MORE
                 </Link>
               </div>

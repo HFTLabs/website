@@ -27,6 +27,7 @@ function Navbar() {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item mx-0 mx-lg-1">
                 <Link
+                  key="home"
                   to="/"
                   className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                 >
@@ -43,6 +44,7 @@ function Navbar() {
               </li> */}
               <li className="nav-item mx-0 mx-lg-1">
                 <Link
+                  key="gallery"
                   className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                   to="/Gallery"
                 >
@@ -51,18 +53,20 @@ function Navbar() {
               </li>
               <li className="nav-item mx-0 mx-lg-1">
                 <Link
+                  key="wallet"
                   className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                   to="/Wallet"
                 >
-                  My Wallet
+                  Mint Avatars
                 </Link>
               </li>
               <li className="nav-item mx-0 mx-lg-1">
                 <Link
+                  key="mycollections"
                   className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
                   to="/WalletHistory"
                 >
-                  Wallet History
+                  My Collection
                 </Link>
               </li>
             </ul>

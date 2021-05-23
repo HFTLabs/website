@@ -31,7 +31,7 @@ function About1() {
             </div>
           </div>
      <ScrollAnimation
-          animateIn="fadeIn"
+          animateIn="bounceInLeft"
           animateOnce="true"
           duration={1.5}
         >
@@ -57,7 +57,7 @@ function About1() {
           <br />
           <div class="text-center mt-4">
             <Link class="btn btn-xl btn-outline-primary" to="/Wallet">
-              GET YOUR AVATAR
+              MINT AVATARS
             </Link>
           </div>
        

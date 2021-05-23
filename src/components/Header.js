@@ -6,40 +6,44 @@ import ScrollAnimation from "react-animate-on-scroll";
 function Header(props) {
   return (
     <div>
-      <header class="masthead bg-primary text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
+      <header className="masthead bg-primary text-white text-center">
+        <div className="container d-flex align-items-center flex-column">
           {(() => {
             if (props.changeBackground === "true") {
               return (
                 <img
-                  class="masthead-avatar mb-5 hari"
+                  className="masthead-avatar mb-5 hari"
                   src={props.image}
                   alt="..."
                 />
               );
             } else {
               return (
-                <img class="masthead-avatar mb-5" src={props.image} alt="..." />
+                <img
+                  className="masthead-avatar mb-5"
+                  src={props.image}
+                  alt="..."
+                />
               );
             }
           })()}
           <ScrollAnimation
             animateIn="bounceInLeft"
-            animateOnce="true"
+            animateOnce={true}
             duration={1}
           >
-            <h1 class="masthead-heading text-uppercase mb-0 yellow">
+            <h1 className="masthead-heading text-uppercase mb-0 yellow">
               {props.text}
             </h1>
-            <p class="masthead-subheading font-weight-light mb-0 yellow1">
+            <p className="masthead-subheading font-weight-light mb-0 yellow1">
               {props.para}
             </p>
-            <div class="text-center mt-4">
+            <div className="text-center mt-4">
               {(() => {
                 if (props.page === "noMetamask") {
                   return (
                     <a
-                      class="btn btn-xl btn-outline-light"
+                      className="btn btn-xl btn-outline-light"
                       href="https://metamask.io/"
                       target="_blank"
                     >
@@ -48,8 +52,8 @@ function Header(props) {
                   );
                 } else {
                   return (
-                    <Link class="btn btn-xl btn-outline-light" to="/Wallet">
-                      GET YOUR AVATAR
+                    <Link className="btn btn-xl btn-outline-light" to="/Wallet">
+                      MINT AVATARS
                     </Link>
                   );
                 }

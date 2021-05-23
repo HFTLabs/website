@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function Payment() {
   return (
     <div>
-      <header class="masthead bg-white text-white text-center">
-        <div class="container d-flex align-items-center flex-column">
-          <div class="card Blink">
-            <div class="card__icon">
+      <header className="masthead bg-white text-white text-center">
+        <div className="container d-flex align-items-center flex-column">
+          <div className="card Blink">
+            <div className="card__icon">
               <svg viewBox="0 0 100 100">
                 <g transform="translate(0,-952.36218)">
                   <path
@@ -23,12 +23,12 @@ function Payment() {
               </svg>
             </div>
           </div>
-          <p class="masthead-subheading font-weight-light mb-0 text-black">
-            Your token is being added to blockchain. The transaction might take
-            some time. You can check in Wallet History after some time.
+          <p className="masthead-subheading font-weight-light mb-0 text-black">
+            Your transaction is being processed. This might take
+            some time. Once successful, visit my collection page.
           </p>
-          <div class="text-center mt-4">
-            <Link class="btn btn-xl btn-outline-primary" to="/Wallet">
+          <div className="text-center mt-4">
+            <Link className="btn btn-xl btn-outline-primary" to="/Wallet" key="payment">
               MINT MORE
             </Link>
           </div>

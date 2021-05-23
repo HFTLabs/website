@@ -9,26 +9,26 @@ class About extends Component {
   render() {
     return (
       <div>
-        <section class="page-section bg-white text-white mb-0" id="about">
-          <div class="container">
-            <h2 class="page-section-heading text-center text-uppercase text-black">
+        <section className="page-section bg-white text-white mb-0" id="about">
+          <div className="container">
+            <h2 className="page-section-heading text-center text-uppercase text-black">
               we are meebit avatars!
             </h2>
-            <div class="divider-custom">
-              <div class="divider-custom-line"></div>
-              <div class="divider-custom-icon">
-                <i class="fas fa-star"></i>
+            <div className="divider-custom">
+              <div className="divider-custom-line"></div>
+              <div className="divider-custom-icon">
+                <i className="fas fa-star"></i>
               </div>
-              <div class="divider-custom-line"></div>
+              <div className="divider-custom-line"></div>
             </div>
             <ScrollAnimation
               animateIn="bounceInRight"
-              animateOnce="true"
+              animateOnce={true}
               duration={1}
             >
-              <div class="row">
-                <div class="col-lg-4 ml-auto">
-                  <p class="lead text-black">
+              <div className="row">
+                <div className="col-lg-4 ml-auto">
+                  <p className="lead text-black">
                     Meebit Avatars is a digital art project on the Ethereum
                     Blockchain paying homage to Meebits. They are unique and
                     single edition 1/1 NFTs. Only 4096 unique Meebit Avatars
@@ -38,13 +38,13 @@ class About extends Component {
                     IPFS.
                   </p>
                 </div>
-                <div class="col-lg-4 ml-auto">
-                  <p class="lead">
-                    <img src="/images/4.gif" alt="/" class="hari1" />
+                <div className="col-lg-4 ml-auto">
+                  <p className="lead">
+                    <img src="/images/4.gif" alt="/" className="hari1" />
                   </p>
                 </div>
-                <div class="col-lg-4 ml-auto">
-                  <p class="lead text-black">
+                <div className="col-lg-4 ml-auto">
+                  <p className="lead text-black">
                     Each Avatar is unique and programmatically generated from
                     over 60 possible animations. All avatars are rarer than
                     others. Meebit Avatars were inspired by the original
@@ -56,9 +56,9 @@ class About extends Component {
               </div>
             </ScrollAnimation>
           </div>
-          <div class="text-center mt-4">
-            <Link class="btn btn-xl btn-outline-primary" to="/Wallet">
-              GET YOUR AVATAR
+          <div className="text-center mt-4">
+            <Link className="btn btn-xl btn-outline-primary" to="/Wallet">
+              MINT AVATARS
             </Link>
           </div>
         </section>
