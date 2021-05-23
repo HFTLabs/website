@@ -13,7 +13,7 @@ class Portfolio extends Component {
   }
   async showImages() {
     for (var i = 1; i <= 6; i++) {
-      var pic = "../images/" + i + ".gif";
+      var pic = "/images/" + i + ".gif";
       images.push(
         <div className="col-md-6 col-lg-4 mb-5">
           <div
