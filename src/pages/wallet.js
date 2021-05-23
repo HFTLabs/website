@@ -8,83 +8,69 @@ import NoMetamask from "../components/NoMetamask";
 import image1 from "../assets/img/metamask.png";
 import Web3 from "web3";
 
-var flag = 0;
 class WalletPage extends Component {
-  async componentWillMount() {
+  async componentDidMount() {
     window.scrollTo(0, 0);
-    // var ethereum = window.ethereum;
-    // var [addr, setAddr] = useState("");
-    // if (ethereum) {
-    //   ethereum.on("accountsChanged", function (accounts) {
-    //     setAddr(accounts[0]);
-    //   });
-    // }
     await this.loadWeb3();
-    await this.loadBlockchainData();
   }
 
   async loadWeb3() {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
-      flag = 1;
-      await window.ethereum.enable();
+      if (!(await this.isLocked())) {
+        this.setState({ flag: 1 });
+        await window.ethereum.enable();
+      } else {
+        this.setState({ flag: 2 });
+      }
     } else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider);
-    } else {
-      flag = 0;
-    }
-  }
-
-  async loadBlockchainData() {
-    const variable = 0;
-    /*const web3 = window.web3;
-    // Load account
-    const accounts = await web3.eth.getAccounts();
-    this.setState({ account: accounts[0] });
-
-    const networkId = await web3.eth.net.getId();
-    const networkData = Color.networks[networkId];
-    if (networkData) {
-      const abi = Color.abi;
-      const address = networkData.address;
-      const contract = new web3.eth.Contract(abi, address);
-      this.setState({ contract });
-      const totalSupply = await contract.methods.totalSupply().call();
-      this.setState({ totalSupply });
-      // Load Colors
-      for (var i = 1; i <= totalSupply; i++) {
-        const color = await contract.methods.colors(i - 1).call();
-        this.setState({
-          colors: [...this.state.colors, color]
-        });
+      if (!(await this.isLocked())) {
+        this.setState({ flag: 1 });
+      } else {
+        this.setState({ flag: 2 });
       }
     } else {
-      window.alert("Smart contract not deployed to detected network.");
-    }*/
+      this.setState({ flag: 0 });
+    }
+  }
+  async isLocked() {
+    const accounts = await window.web3.eth.getAccounts();
+    if (accounts.length === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  constructor(props) {
+    super(props);
+    this.state = {
+      flag: 0
+    };
   }
 
-  mint = (color) => {
-    this.state.contract.methods
-      .mint(color)
-      .send({ from: this.state.account })
-      .once("receipt", (receipt) => {
-        this.setState({
-          colors: [...this.state.colors, color]
-        });
-      });
-  };
   render() {
     const renderBody = () => {
-      if (flag === 0) {
+      if (this.state.flag === 0) {
         return (
           <NoMetamask
             image={image1}
             text=""
             para="Ethereum Wallet Not Detected"
+            showDownload="true"
           />
         );
-      } else if (flag === 1) {
-        return <Mint />;
+      } else if (this.state.flag === 1) {
+        return <Mint web3Handle={window.web3} />;
+      } else if (this.state.flag === 2) {
+        return (
+          <NoMetamask
+            image={image1}
+            text=""
+            para="LOGIN TO METAMASK"
+            showDownload="false"
+          />
+        );
       }
     };
     return (
