@@ -63,13 +63,13 @@ function Navbar() {
               </li>
               <div id="checkforMobile">
               <a
-                className="btn btn-outline-light btn-social mx-1"
+                className="btn-outline-light btn-social mx-1"
                 href="https://twitter.com/meebit_avatars"
                 target="_blank"
               >
                 <i className="fab fa-fw fa-twitter"></i>
               </a>
-              <a className="btn btn-outline-light btn-social mx-1" href="https://discord.gg/m4MPstgTNd" target="_blank">
+              <a className="btn-outline-light btn-social mx-1" href="https://discord.gg/m4MPstgTNd" target="_blank">
                 <i className="fab fa-fw fa-discord"></i>
               </a>
               </div>
