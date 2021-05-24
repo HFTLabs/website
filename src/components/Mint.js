@@ -30,7 +30,12 @@ class Mint extends Component {
     } else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider);
     }
-
+    
+    this.check();
+    this.setupBlockchain();
+  }
+  
+  async setupBlockchain() {
     const web3 = window.web3;
     const accounts = await web3.eth.getAccounts();
     this.setState({ account: accounts[0] });
@@ -46,8 +51,7 @@ class Mint extends Component {
       window.alert("Smart contract not deployed to detected network.");
       this.setState({ network: 0 });
     }
-
-    this.check();
+  
     optionValue = 1;
     let etherCost = await this.state.contract.methods.calculatePrice(optionValue).call();
     etherCost = web3.utils.fromWei(etherCost, 'ether');
@@ -64,7 +68,8 @@ class Mint extends Component {
       noOfAvatars: 1,
       accountInterval: 0,
       network: 1,
-      ethCost: null
+      ethCost: null,
+      networkChanged: 0
     };
   }
 
@@ -79,8 +84,13 @@ class Mint extends Component {
       }
       if (window.ethereum.networkVersion !== "4") {
         this.setState({ network: 0 });
+        this.setState({ networkChanged: 1 });
       } else {
         this.setState({ network: 1 });
+        if(this.state.networkChanged === 1) {
+          this.setupBlockchain();
+          this.setState({ networkChanged: 0 });
+        }
       }
     }, 1500);
   }
