@@ -15,15 +15,12 @@ class WalletHistory extends React.Component {
     window.scrollTo(0, 0);
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum);
-      await window.ethereum.enable();
     } else if (window.web3) {
       window.web3 = new Web3(window.web3.currentProvider);
     }
 
-	  this.check();
+    this.check();
     await this.loadBlockchainData();
-    images = [];
-    await this.showImages();
   }
 
   async loadBlockchainData() {
@@ -44,6 +41,8 @@ class WalletHistory extends React.Component {
         const tempTokens = await  this.state.contract.methods.tokensOfOwner(this.state.account).call();
         this.setState({ tokens: tempTokens })
         console.log("Tot Supply: " + tempTokens)
+	images = [];
+    	await this.showImages();
       } else
       {
         window.alert("Smart contract not deployed to detected network.");
@@ -61,7 +60,8 @@ class WalletHistory extends React.Component {
       images: [],
       noOfAvatars: 1,
       accountInterval: 0,
-      network: 1
+      network: 1,
+      networkChanged: 0
     };
   }
 
@@ -77,8 +77,13 @@ class WalletHistory extends React.Component {
       }
       if (window.ethereum.networkVersion !== "4") {
         this.setState({ network: 0 });
+	this.setState({ networkChanged: 1 });
       } else {
         this.setState({ network: 1 });
+	if(this.state.networkChanged === 1) {
+	this.setState({ networkChanged: 0 });
+        await this.loadBlockchainData();
+        }
       }
     }, 1500);
   }
@@ -153,7 +158,14 @@ class WalletHistory extends React.Component {
               </div>
               <div className="divider-custom-line"></div>
             </div>
-            <div className="row justify-content-center">{images}</div>
+		{this.state.network === 1 ? (
+            		<div className="row justify-content-center">{images}</div>
+		 ) : (	<div className="text-center mt-4">
+			<p className="masthead-subheading font-weight-light mb-0 text-red">
+			  Please connect to Ethereum Mainnet for minting NFTs
+			</p>
+              		</div>)
+		}
           </div>
         </section>
       </div>
