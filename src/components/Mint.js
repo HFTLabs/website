@@ -52,7 +52,11 @@ class Mint extends Component {
       this.setState({ network: 0 });
     }
   
-    optionValue = this.state.selectedOption.value;
+    if (this.state.selectedOption === undefined) {
+      optionValue = 1;
+    } else {
+      optionValue = this.state.selectedOption.value;
+    }
     let etherCost = await this.state.contract.methods.calculatePrice(optionValue).call();
     etherCost = web3.utils.fromWei(etherCost, 'ether');
     this.setState({ ethCost: etherCost });
@@ -132,11 +136,6 @@ class Mint extends Component {
   };
 
   render() {
-    const blockchain = () => {
-      console.log("inside blockchain");
-      this.props.history.push("/Payment");
-    };
-    
     const { selectedOption } = this.state;
     return (
       <div>
