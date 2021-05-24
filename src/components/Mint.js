@@ -52,7 +52,7 @@ class Mint extends Component {
       this.setState({ network: 0 });
     }
   
-    optionValue = 1;
+    optionValue = this.state.selectedOption.value;
     let etherCost = await this.state.contract.methods.calculatePrice(optionValue).call();
     etherCost = web3.utils.fromWei(etherCost, 'ether');
     this.setState({ ethCost: etherCost });
