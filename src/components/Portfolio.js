@@ -7,7 +7,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 var images = [];
 class Portfolio extends Component {
-  async componentDidMount() {
+  async componentWillMount() {
     images = [];
     await this.showImages();
   }
