@@ -146,12 +146,12 @@ class Mint extends Component {
             </h1>
             <br />
             <img className="masthead-avatar mb-5" src={image1} alt="..." />
-            <p className="masthead-subheading font-weight-light mb-0 text-black">
-              Choose required quantity and click on mint to create Avatars.
-            </p>
             <br />
             {this.state.network === 1 ? (
               <div>
+               <p className="masthead-subheading font-weight-light mb-0 text-black">
+                Choose required quantity and click on mint to create Avatars.
+              </p>
                 <br />
                 <Select
                 value={selectedOption}
