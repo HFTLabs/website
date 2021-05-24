@@ -34,14 +34,6 @@ function Navbar() {
                   Home
                 </Link>
               </li>
-              {/* <li className="nav-item mx-0 mx-lg-1">
-                <Link
-                  to="/Overview"
-                  className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-                >
-                  Overview
-                </Link>
-              </li> */}
               <li className="nav-item mx-0 mx-lg-1">
                 <Link
                   key="gallery"
@@ -69,6 +61,18 @@ function Navbar() {
                   My Collection
                 </Link>
               </li>
+              <div id="checkforMobile">
+              <a
+                className="btn btn-outline-light btn-social mx-1"
+                href="https://twitter.com/meebit_avatars"
+                target="_blank"
+              >
+                <i className="fab fa-fw fa-twitter"></i>
+              </a>
+              <a className="btn btn-outline-light btn-social mx-1" href="https://discord.gg/m4MPstgTNd" target="_blank">
+                <i className="fab fa-fw fa-discord"></i>
+              </a>
+              </div>
             </ul>
           </div>
         </div>
