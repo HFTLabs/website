@@ -6,6 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 var images = [];
 function showImages() {
+  images = [];
   for (var i = 1; i <= 21; i++) {
     var pic = "/images/" + i + ".gif";
     images.push(
