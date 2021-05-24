@@ -162,7 +162,7 @@ class WalletHistory extends React.Component {
             		<div className="row justify-content-center">{images}</div>
 		 ) : (	<div className="text-center mt-4">
 			<p className="masthead-subheading font-weight-light mb-0 text-red">
-			  Please connect to Ethereum Mainnet for minting NFTs
+			  Please connect to Ethereum Mainnet to view your collections.
 			</p>
               		</div>)
 		}
