@@ -10876,7 +10876,7 @@ form .row:first-child .floating-label-form-group {
   margin: auto;
 }
 
-/* @media (min-width: 520px) {
+@media (min-width: 520px) {
   .select {
     width:12%;
   }
@@ -10886,7 +10886,7 @@ form .row:first-child .floating-label-form-group {
   .select {
     width:32%;
   }
-} */
+}
 
 
 @mixin tablet-and-up {
