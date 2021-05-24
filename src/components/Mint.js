@@ -107,11 +107,11 @@ class Mint extends Component {
           from: this.state.account, value: web3.utils.toWei(this.state.ethCost, 'ether')
         })
       .once("receipt", (receipt) => {
-        window.alert("Transaction Successful!! Redirecting to your collection.");
+        alert("Transaction Successful!! Redirecting to your collection.");
         this.props.history.push("/WalletHistory");
       })
       .once("error", (receipt) => {
-        window.alert("Transaction Failed!!! Please try again.");
+        alert("Transaction Failed!!! Please try again.");
         this.props.history.push("/Wallet");
       });
     this.props.history.push("/Payment");
