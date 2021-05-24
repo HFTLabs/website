@@ -6,7 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 var images = [];
 class Gallery extends React.Component {
-  async componentDidMount() {
+  async componentWillMount() {
     images = [];
     await this.showImages();
   }
