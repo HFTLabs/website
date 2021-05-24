@@ -31,7 +31,7 @@ class About extends Component {
                   <p className="lead text-black">
                     Meebit Avatars is a digital art project on the Ethereum
                     Blockchain paying homage to Meebits. They are unique and
-                    single edition 1/1 NFTs. Only 4096 unique Meebit Avatars
+                    single edition 1/1 NFTs. Only 6196 unique Meebit Avatars
                     will be created. This project is inspired by Meebits and is
                     not affiliated with Larva Labs. The Avatars are stored as
                     ERC-721 tokens on the Ethereum blockchain and hosted on
