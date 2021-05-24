@@ -6,7 +6,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 var images = [];
 function showImages() {
-  for (var i = 1; i <= 24; i++) {
+  for (var i = 1; i <= 21; i++) {
     var pic = "/images/" + i + ".gif";
     images.push(
       <div className="col-md-6 col-lg-4 mb-5">
@@ -18,7 +18,6 @@ function showImages() {
           <div>
             <p className="lead text-black text-center">
               <img className="img-fluid" src={pic} alt="..." />
-              <h4>MeebitAvatar #{i}</h4>
             </p>
           </div>
         </div>
