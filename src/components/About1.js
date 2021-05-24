@@ -31,7 +31,7 @@ function About1() {
             </div>
           </div>
      <ScrollAnimation
-          animateIn="bounceInLeft"
+          animateIn="fadeIn"
           animateOnce="true"
           duration={1.5}
         >
