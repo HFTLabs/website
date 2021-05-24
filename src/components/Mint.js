@@ -150,8 +150,6 @@ class Mint extends Component {
               Choose required quantity and click on mint to create Avatars.
             </p>
             <br />
-            {console.log(count[0].value)}
-            <br />
             {this.state.network === 1 ? (
               <div>
                 <br />
